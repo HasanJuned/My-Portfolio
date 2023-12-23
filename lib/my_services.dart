@@ -12,7 +12,9 @@ class MyServices extends StatefulWidget {
 }
 
 class _MyServicesState extends State<MyServices> {
-  bool isHover = false;
+  bool isHover1 = false;
+  bool isHover2 = false;
+  bool isHover3 = false;
 
   @override
   Widget build(BuildContext context) {
@@ -51,11 +53,11 @@ class _MyServicesState extends State<MyServices> {
                     onTap: () {},
                     onHover: (value) {
                       setState(() {
-                        isHover = value;
+                        isHover1 = value;
                       });
                     },
                     child: BuildAnimatedContainer(
-                      isHover: isHover,
+                      isHover: isHover1,
                     ),
                 ),
                 SizedBox(
@@ -65,11 +67,11 @@ class _MyServicesState extends State<MyServices> {
                   onTap: () {},
                   onHover: (value) {
                     setState(() {
-                      isHover = value;
+                      isHover2 = value;
                     });
                   },
                   child: BuildAnimatedContainer(
-                    isHover: isHover,
+                    isHover: isHover2,
                   ),
                 ),
                 SizedBox(
@@ -79,11 +81,11 @@ class _MyServicesState extends State<MyServices> {
                   onTap: () {},
                   onHover: (value) {
                     setState(() {
-                      isHover = value;
+                      isHover3 = value;
                     });
                   },
                   child: BuildAnimatedContainer(
-                    isHover: isHover,
+                    isHover: isHover3,
                   ),
                 ),
                 SizedBox(
@@ -114,11 +116,12 @@ class BuildAnimatedContainer extends StatelessWidget {
       ),
       width: isHover ? 370 : 350,
       //height: 450,
-      alignment: Alignment.center,
+      //alignment: Alignment.center,
       padding: EdgeInsets.symmetric(horizontal: 20, vertical: 24),
       decoration: BoxDecoration(
           color: AppColors.bgColor2,
           borderRadius: BorderRadius.circular(30),
+          border: isHover ? Border.all(color: Colors.white, width: 2) : null,
           boxShadow: [
             BoxShadow(
                 color: Colors.black54,
