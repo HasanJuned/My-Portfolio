@@ -13,27 +13,27 @@ class AppTextStyles{
   static TextStyle montserratStyle({required Color color}){
     return GoogleFonts.montserrat(
       color: color,
-      fontWeight: FontWeight.w800,
+      fontWeight: FontWeight.w500,
       fontSize: 24
     );
   }
 
-  static TextStyle headingStyles(){
+  static TextStyle headingStyles({double fontSize = 36, Color color = Colors.white}){
     return GoogleFonts.rubikMoonrocks(
-      color: Colors.white,
+      color: color,
       fontWeight: FontWeight.bold,
-      fontSize: 36,
+      fontSize: fontSize,
       letterSpacing: 2,
       height: 3
     );
   }
 
   static TextStyle normalStyles(){
-    return GoogleFonts.signikaNegative(
+    return const TextStyle(
       color: Colors.white,
       //fontWeight: FontWeight.w500,
       fontSize: 17,
-      letterSpacing: 1
+      letterSpacing: 1.7
     );
   }
 
