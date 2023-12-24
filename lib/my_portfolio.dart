@@ -70,7 +70,10 @@ class _MyPortfolioScreenState extends State<MyPortfolioScreen> {
                       setState(() {
                         if(value){
                           hoverIndex = index;
-
+                        }else{
+                          setState(() {
+                            hoverIndex = null;
+                          });
                         }
                       });
                     },
@@ -109,12 +112,20 @@ class _MyPortfolioScreenState extends State<MyPortfolioScreen> {
                                     fontSize: 20
                                   ),
                                 ),
-                                SizedBox(height: 15,),
+                                SizedBox(height: 10,),
                                 Text(
-                                  '''To excel as a Flutter developer, I aim to l growth but also contribute to the overall development of the business.''',
+                                  '''To excel as a Flutter developer, I aim to l growth but jwbefhrvefjebigv jefbirv bfiebf vjkfih vkbfehirb.''',
                                   style: AppTextStyles.normalStyles(color: Colors.black87),
                                   textAlign: TextAlign.center,
+                                  maxLines: 3,
+                                  overflow: TextOverflow.ellipsis,
                                 ),
+                                SizedBox(height: 20,),
+                                CircleAvatar(
+                                  maxRadius: 20,
+                                  backgroundColor: Colors.white,
+                                  child: Icon(Icons.share,),
+                                )
                               ],
                             ),
                           ),

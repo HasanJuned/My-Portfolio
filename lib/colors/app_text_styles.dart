@@ -37,4 +37,10 @@ class AppTextStyles{
     );
   }
 
+  static TextStyle comfortaaStyle(){
+    return GoogleFonts.comforter(
+      fontSize: 10, fontWeight: FontWeight.w800, color: Colors.grey
+    );
+  }
+
 }
