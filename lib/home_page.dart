@@ -60,98 +60,96 @@ class MyHomePage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            Padding(
-              padding: EdgeInsets.symmetric(vertical: 30, horizontal: size.width *.1),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                crossAxisAlignment: CrossAxisAlignment.end,
-                children: [
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      FadeInDown(
-                        duration: Duration(milliseconds: 1200),
-                        child: Text(
-                          'Hello, It\'s Me',
-                          style: AppTextStyles.montserratStyle(color: Colors.white),
-                        ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: [
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    FadeInDown(
+                      duration: Duration(milliseconds: 1200),
+                      child: Text(
+                        'Hello, It\'s Me',
+                        style: AppTextStyles.montserratStyle(color: Colors.white),
                       ),
-                      Constants.sizedBox(height: 15),
-                      FadeInRight(
-                        duration: Duration(milliseconds: 1400),
+                    ),
+                    Constants.sizedBox(height: 15),
+                    FadeInRight(
+                      duration: Duration(milliseconds: 1400),
 
-                        child: Text(
-                          'Hasan Ahmed',
-                          style: AppTextStyles.headingStyles(),
-                        ),
+                      child: Text(
+                        'Hasan Ahmed',
+                        style: AppTextStyles.headingStyles(),
                       ),
-                      Constants.sizedBox(height: 15),
-                      FadeInLeft(
-                        duration: Duration(milliseconds: 1400),
+                    ),
+                    Constants.sizedBox(height: 15),
+                    FadeInLeft(
+                      duration: Duration(milliseconds: 1400),
 
-                        child: Row(
-                          children: [
-                            Text(
-                              'And I\'m a ',
-                              style: AppTextStyles.montserratStyle(
-                                  color: Colors.white),
-                            ),
-                            AnimatedTextKit(
-                                pause: Duration(milliseconds: 1000),
-                                displayFullTextOnTap: true,
-                                animatedTexts: [
-                                  TyperAnimatedText('Flutter Developer',
-                                      textStyle: AppTextStyles.montserratStyle(
-                                          color: Colors.lightBlue),
-                                      speed: Duration(milliseconds: 40)),
-                                  TyperAnimatedText('Mobile Application Developer',
-                                      textStyle: AppTextStyles.montserratStyle(
-                                          color: Colors.lightBlue),
-                                      speed: Duration(milliseconds: 40)),
-                                ])
-                          ],
-                        ),
-                      ),
-                      Constants.sizedBox(height: 15),
-                      FadeInDown(
-                        duration: Duration(milliseconds: 1600),
-
-                        child: SizedBox(
-                          width: size.width * .5,
-                          child: Text(
-                            '''To excel as a Flutter developer, I aim to leverage my expertise in Flutter, Rest API integration, and Firebase for proficient app development. My goal is to not only enhance my personal growth but also contribute to the overall development of the business.''',
-                            style: AppTextStyles.normalStyles(),
+                      child: Row(
+                        children: [
+                          Text(
+                            'And I\'m a ',
+                            style: AppTextStyles.montserratStyle(
+                                color: Colors.white),
                           ),
+                          AnimatedTextKit(
+                              pause: Duration(milliseconds: 1000),
+                              displayFullTextOnTap: true,
+                              animatedTexts: [
+                                TyperAnimatedText('Flutter Developer',
+                                    textStyle: AppTextStyles.montserratStyle(
+                                        color: Colors.lightBlue),
+                                    speed: Duration(milliseconds: 40)),
+                                TyperAnimatedText('Mobile Application Developer',
+                                    textStyle: AppTextStyles.montserratStyle(
+                                        color: Colors.lightBlue),
+                                    speed: Duration(milliseconds: 40)),
+                              ])
+                        ],
+                      ),
+                    ),
+                    Constants.sizedBox(height: 15),
+                    FadeInDown(
+                      duration: Duration(milliseconds: 1600),
+
+                      child: SizedBox(
+                        width: size.width * .5,
+                        child: Text(
+                          '''To excel as a Flutter developer, I aim to leverage my expertise in Flutter, Rest API integration, and Firebase for proficient app development. My goal is to not only enhance my personal growth but also contribute to the overall development of the business.''',
+                          style: AppTextStyles.normalStyles(),
                         ),
                       ),
-                      Constants.sizedBox(height: 22),
-                      FadeInUp(
-                        duration: Duration(milliseconds: 1600),
+                    ),
+                    Constants.sizedBox(height: 22),
+                    FadeInUp(
+                      duration: Duration(milliseconds: 1600),
 
-                        child: Row(
-                          children: [
-                            BuildSocialButton(
-                              asset: AppAssets.facebook,
-                            ),
-                            Constants.sizedBox(width: 15),
-                            BuildSocialButton(
-                              asset: AppAssets.linkedin,
-                            ),
-                            Constants.sizedBox(width: 15),
-                            BuildSocialButton(
-                              asset: AppAssets.github,
-                            ),
-                          ],
-                        ),
+                      child: Row(
+                        children: [
+                          BuildSocialButton(
+                            asset: AppAssets.facebook,
+                          ),
+                          Constants.sizedBox(width: 15),
+                          BuildSocialButton(
+                            asset: AppAssets.linkedin,
+                          ),
+                          Constants.sizedBox(width: 15),
+                          BuildSocialButton(
+                            asset: AppAssets.github,
+                          ),
+                        ],
                       ),
-                      Constants.sizedBox(height: 18),
-                      FadeInUp(
-                        duration: Duration(milliseconds: 1600),
+                    ),
+                    Constants.sizedBox(height: 18),
+                    FadeInUp(
+                      duration: Duration(milliseconds: 1600),
 
-                        child: SizedBox(
-                          height: 55,
-                          width: 130,
-                          child: ElevatedButton(
+                      child: SizedBox(
+                        height: 55,
+                        width: 130,
+                        child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
                               backgroundColor: AppColors.themeColor,
                               padding: EdgeInsets.symmetric(horizontal: 22, vertical: 10),
@@ -160,15 +158,14 @@ class MyHomePage extends StatelessWidget {
                               // minWidth: 130,
                             ),
                             onPressed: (){},
-                          child: Text('Download CV', style: TextStyle(color: Colors.white),)),
-                        ),
-                      )
-                    ],
-                  ),
-                  //SizedBox(width: 20,),
-                  ProfileAnimation()
-                ],
-              ),
+                            child: Text('Download CV', style: TextStyle(color: Colors.white),)),
+                      ),
+                    )
+                  ],
+                ),
+                //SizedBox(width: 20,),
+                ProfileAnimation()
+              ],
             ),
             SizedBox(height: 200,),
             AboutMe(),
